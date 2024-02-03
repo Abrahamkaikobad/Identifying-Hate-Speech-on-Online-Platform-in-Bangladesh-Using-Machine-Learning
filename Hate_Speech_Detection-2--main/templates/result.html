@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/result.css') }}"
+    />
+    <title>Result Page</title>
+  </head>
+  <body>
+    <h1>Predicted Result</h1>
+    <p>{{ prediction_result }}</p>
+    <div class="back">
+      <a href="/"><button>Go to Home Page</button></a>
+      <a href="/prediction"><button>Go to Prediction Page</button></a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/prediction.css') }}"
+    />
+    <title>Prediction Page</title>
+  </head>
+  <body>
+    <div class="description">
+      Give your words as Bangla and Banglish here at the same time and press
+      submit. It will give you your expected result.
+    </div>
+    <div class="container">
+      <h1>Prediction Sector</h1>
+      <form action="/predict" method="post">
+        <label for="text_bangla">Bangla Text:</label>
+        <textarea
+          id="text_bangla"
+          name="text_bangla"
+          rows="4"
+          cols="35"
+          required
+        ></textarea>
+        <br /><br />
+        <label for="text_banglish">Banglish Text:</label>
+        <textarea
+          id="text_banglish"
+          name="text_banglish"
+          rows="4"
+          cols="35"
+          required
+        ></textarea>
+        <br />
+        <br />
+        <div class="press">
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Clear" />
+        </div>
+      </form>
+      <a href="/"><button>Go To Home Page</button></a>
+    </div>
+  </body>
+</html>
